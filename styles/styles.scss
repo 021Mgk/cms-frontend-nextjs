@@ -1,0 +1,33 @@
+@import './utils/variable';
+@import './layout/layout';
+@import './components/components';
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+      //  font-family: IRANSans, "B Roya", Roya, Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        font-size: 1.4rem;
+        font-weight: 200;
+        line-height: 1.5;
+        direction: rtl;
+    }
+
+   a{
+       text-decoration: none;
+       color: $white;
+   }
+}
+
+
+@import 'theme';

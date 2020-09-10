@@ -8,8 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.3.5",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@types/isomorphic-fetch": "0.0.35",
+    "@types/yup": "^0.29.6",
+    "formik": "^2.1.5",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^9.5.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.26.10",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.3",
+    "typescript": "^4.0.2"
   }
 }

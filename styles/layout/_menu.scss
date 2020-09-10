@@ -1,0 +1,18 @@
+.navigation{
+    background-color:$primery-color !important;
+    
+    a.nav-link{
+            color: $white;
+            padding: 1rem 1.5rem;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 15px;
+       
+
+         &:hover  a{
+            color: $secendry-color;
+        }
+    }
+
+
+}
