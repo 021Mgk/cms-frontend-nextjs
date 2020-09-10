@@ -1,9 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import DatePicker from 'react-datepicker2'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,6 +31,7 @@ const INITIALVALUE = {
     type: ''
 }
 export default function registerArticle() {
+    const [date , setDate] = useState();
     const classes = useStyles();
 
     const ArticleFormValidation = yup.object().shape({
@@ -68,6 +70,14 @@ export default function registerArticle() {
                                 onBlur={handleBlur}
                                 value={values.register_date}
                             /> */}
+
+                            <DatePicker
+                                timePicker={false}
+                                value={date}
+                                onChange={() => setDate(date)}                               
+                            />
+
+
 
                             <input
                                 type="text"
@@ -193,3 +203,40 @@ export default function registerArticle() {
         </div>
     )
 }
+
+
+
+// import React, { useState } from 'react';
+// import DatePicker from 'react-datepicker2'
+// import momentJalaali from 'moment-jalaali';
+
+
+// const jalal = () => {
+
+//     const [onChangeValue, setOnChangeValue] = useState(momentJalaali('1399/6/20', 'jYYYY/jM/jD'));
+//     const persionToEnglish = () =>{
+//         const formated =  onChangeValue.format('YYYY/M/D');
+//         console.log(formated  , " formated");
+//         const mom = momentJalaali('1360/5/26', 'jYYYY/jM/jD');
+//         console.log("mom" , mom)
+//     }
+
+
+//     return (
+//         <>
+//             <DatePicker
+//                 value={onChangeValue}
+//                 persianDigits={true}
+//                 isGregorian={false}
+//                 timePicker={false}
+//                 onChange={onChangeValue => {
+//                     setOnChangeValue(onChangeValue);
+//                     persionToEnglish();
+//                 }}
+//             />
+//         </>
+//     );
+// }
+
+
+// export default jalal;
